@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <img id="comic" />
+  <script>
+    const proxy = 'https://corsproxy.io/?url=';
+
+    fetch(proxy + 'https://xkcd.com/info.0.json')
+      .then(r => r.json())
+      .then(latest => {
+        let num;
+        do { num = Math.floor(Math.random() * latest.num) + 1; } while (num === 404);
+        return fetch(proxy + `https://xkcd.com/${num}/info.0.json`);
+      })
+      .then(r => r.json())
+      .then(data => document.getElementById('comic').src = data.img)
+      .catch(err => {
+        document.body.innerText = 'Error: ' + err;
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
