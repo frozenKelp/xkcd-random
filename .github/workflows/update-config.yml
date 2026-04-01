@@ -1,8 +1,11 @@
 name: Update Config
 on:
   schedule:
-    - cron: '0 9 * * *'  # runs daily at 9am UTC
-  workflow_dispatch:       # lets you trigger manually
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update:
