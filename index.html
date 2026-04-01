@@ -3,7 +3,7 @@
 <body>
   <img id="comic" />
   <script>
-    const proxy = 'https://api.allorigins.win/raw?url=';
+    const proxy = 'https://tinycorsproxy.frozenkelp.workers.dev/?url=';
 
     fetch(proxy + 'https://xkcd.com/info.0.json')
       .then(r => r.json())
