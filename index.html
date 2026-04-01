@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Random XKCD Comic</title>
+  <style>
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+  </style>
+</head>
 <body>
   <img id="comic" alt="Random XKCD comic" object-fit="contain"/>
   <script>
