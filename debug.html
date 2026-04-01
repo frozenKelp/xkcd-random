@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>debug mode</h2>
+  <img id="comic" />
+  <script>
+    const proxy = 'https://corsproxy.io/?url=';
+
+    fetch(proxy + 'https://xkcd.com/info.0.json')
+      .then(r => r.json())
+      .then(data => {
+        console.log(data); // <-- check what this looks like
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
